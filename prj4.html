@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>ajax call</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+             
+             document.getElementById("btn1").addEventListener("click",function(){
+                alert("here is your answer!!");
+            });
+            function validate(){
+                var txt = "";
+                if(document.getElementById("id1").validity){
+                    txt = "number is not in range";
+                }
+                else{
+                    txt = "input is ok";
+                }
+                document.getElementById("here").innerHTML= txt;
+            }
+            function validate1(){
+                var txt="";
+                if(document.getElementById("id2").validity.rangeUnderflow){
+                    txt ="number os too small";
+                }
+                else{
+                    txt ="input is ok!";
+                }
+                document.getElementById("here1").innerHTML = txt;
+            }
+            function cdate(){
+                document.getElementById("date1").innerHTML = Date();
+            }
+            function mover(obj){
+                obj.innerHTML="thank you";
+            }
+            function mleave(obj){
+                obj.innerHTML ="Mouse over me"
+            }
+
+         
+        </script>
+    </head>
+    <body>
+        <input type="number" id ="id1" min ="10" max = "100">
+        <input type="submit" value ="ok" onclick="validate()">
+        <div id ="here"></div>
+
+        <h3 onclick="this.innerHTML = 'I am fine!!'">hello how are you?</h3>
+        <br>
+        <button id ="date1" onclick="cdate()">the time is?</button><br>
+
+        <h2 style="background-color: red" onmouseover="mover(this)" onmouseleave="mleave(this)">
+            Mouse Over me</h2>
+            <br>
+        <button id="btn1">Click me </button>
+        <br>
+        <p id = "11">i will hide soon...</p>
+        <br>
+        <script>
+           $(document).ready(function(){
+               $("#11").click(function(){
+                   $(this).hide();
+               });
+           });
+        </script>
+        
+    </body>
+</html>

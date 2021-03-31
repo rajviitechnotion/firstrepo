@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>first file</title>
+<link rel="stylesheet" href="mycss.css">
+</head>
+<body>
+  <div id=myform >
+  <form method = "post" action = "myphp.php">
+  name: <input type = "text" id ="name1" name = "name" >
+  <br>
+  email: <input type ="text" id ="email1" name ="email">
+  <br>
+  password: <input type ="password" id = "pass1" name ="pass">
+  <br>
+  number: <input type ="number" id="num1" name ="number">
+  <br>
+  <!--comment: <br> 
+  <textarea name = "comment" id="com1" rows = 5 cols = 50 ></textarea><br>-->
+  Gender: <br>
+  <input type="radio" name = "gender" value = "female">female
+  <input type="radio" name = "gender" value = "male">male
+  <input type="radio" name = "gender" value = "other">other
+  <br>
+  choose language: <br>
+  <input type="checkbox" name ="check1" value="php">php
+  <input type="checkbox" name ="check2" value="java">java
+  <input type="checkbox" name ="check3" value="js">js
+  <br>
+   <!--your birth date:
+    <input type="date" name="d" value="<?php echo date('d-m-Y') ?>"><br>-->
+  select your city: <br>
+  <select name ="city[]" multiple>
+   <option value = "Ahmedabad">Ahmedabad</option>
+   <option value = "surart">surat</option>
+   <option value = "baroda">baroda</option>
+   <option value = "mehsana">mehsana</option>
+   <option value = "jamnagar">jamnagar</option>
+  </select>
+  <br>
+  <input type ="submit" value = "submit">
+  </form>
+  </div>
+</body>
+</head>
+</html

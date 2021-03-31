@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Ajax Call</title>
+        <script>
+            function loaddata(){
+                var val1 = new XMLHttpRequest();
+                val1.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        alert(this.responseText);
+                        document.getElementById("1").innerHTML = this.responseText;
+                    }
+                };
+                val1.open("GET","text1.txt",true);
+                val1.send();
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 1>
+        <button onclick="loaddata()">click here</button>
+        </div>
+    </body>
+</html>
